@@ -10,9 +10,9 @@ nodejs && express && mongodb
 Prerequisites
 -------------
 
-* `git`
-* [`nodejs` + `npm`](https://nodejs.org/en/download/)
-* [mongodb](https://docs.mongodb.com/manual/installation/#tutorials):
+* `git` https://git-scm.com/
+* `nodejs+npm` https://nodejs.org/en/download/
+* `mongodb` https://docs.mongodb.com/manual/installation/#tutorials
 
 Running the server (locally)
 -------------
