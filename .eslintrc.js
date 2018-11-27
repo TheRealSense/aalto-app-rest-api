@@ -1,6 +1,17 @@
 module.exports = {
-    "extends": "airbnb-base",
-    "rules": {
-        "semi": [2, "never"],
+    'extends': [
+	    'airbnb-base',
+	    'plugin:jest/recommended',
+    ],
+    'plugins': [
+      'import',
+      'jest',
+    ],
+    'env': {
+      node: true,
+      'jest/globals': true,
+    },
+    'rules': {
+        'semi': [2, 'never'],
     }
 };
