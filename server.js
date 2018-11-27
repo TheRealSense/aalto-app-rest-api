@@ -29,9 +29,12 @@ mongoose.connect(dbConfig.url, {
 app.use(bodyParser.json())
 
 // simple route
+app.use('/', express.static('public'))
+/*
 app.get('/', (req, res) => {
   res.json({ message: 'Post api get successful! xDDD' })
 })
+*/
 
 // require posts routes
 require('./app/routes/post.routes')(app)
