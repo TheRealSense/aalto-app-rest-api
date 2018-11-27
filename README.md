@@ -16,7 +16,7 @@ Documentation
   ```
 
 * Example request url:
-  ```javascript
+  ```
     http://apiurl/posts
     ```
 
@@ -48,7 +48,7 @@ GET /posts
 ```
 
 * Example request url:
-  ```javascript
+  ```
   http://apiurl/posts
   ```
 
@@ -82,7 +82,7 @@ GET /posts
   ```
 
 * Example request url:
-  ```javascript
+  ```
   http://apiurl/posts/####id####
   ```
 
@@ -105,7 +105,7 @@ GET /posts
   ```
 
 * Example request url:
-  ```javascript
+  ```
   http://apiurl/posts/####id####
   ```
 
@@ -137,7 +137,7 @@ GET /posts
   ```
 
 * Example request url:
-  ```javascript
+  ```
   http://apiurl/posts/####id####
   ```
 
