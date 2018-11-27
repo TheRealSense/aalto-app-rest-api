@@ -184,3 +184,11 @@ GET /posts
     "message": "Post delete successful!"
   }
   ```
+
+Developers
+----------
+
+Antti |
+------------ |
+<img src="https://avatars0.githubusercontent.com/u/33100455?s=460&v=4" width="150" height="150"> |
+https://github.com/anttinym |
