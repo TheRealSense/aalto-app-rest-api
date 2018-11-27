@@ -1,6 +1,6 @@
-# AALTO app REST API
+# AALTO app API server
 
-Rest API for Aalto app.
+API server for Aalto app.
 
 ```
 // patched together using:
