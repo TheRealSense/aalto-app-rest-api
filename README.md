@@ -16,9 +16,13 @@ Documentation
   POST /posts
   ```
 
+* Example request url:
+    ```
+    http://apiurl/posts
+    ```
 
-* Example request:
-  ```
+* Example request body:
+  ```json
   {
     "user": "foo",
     "title": "bar",
@@ -27,9 +31,9 @@ Documentation
   ```
 
 * Example response:
-  ```
+  ```javascript
   {
-    "_id": "##########",
+    "_id": "####id####",
     "user": "foo",
     "title": "bar",
     "desc": "foobar",
@@ -45,11 +49,16 @@ Documentation
 GET /posts
 ```
 
+* Example request url:
+    ```
+    http://apiurl/posts
+    ```
+
 * Example response:
-  ```
+  ```javascript
   [
       {
-          "_id": "##########",
+          "_id": "####id####",
           "user": "foo",
           "title": "bar",
           "desc": "foobar",
@@ -58,7 +67,7 @@ GET /posts
           "__v": 0
       },
       {
-          "_id": "##########",
+          "_id": "####id####",
           "user": "foofoo",
           "title": "barbar",
           "desc": "foobarfoobar",
@@ -67,4 +76,79 @@ GET /posts
           "__v": 0
       }
   ]
+  ```
+
+### 3. Get one post with Id:
+
+  ```
+  GET /posts/:postId
+  ```
+
+* Example request url:
+  ```
+  http://apiurl/posts/####id####
+  ```
+
+* Example response:
+  ```javascript
+  {
+    "_id": "####id####",
+    "user": "foo",
+    "title": "bar",
+    "desc": "foobar",
+    "createdAt": "2018-11-26T16:55:56.520Z",
+    "updatedAt": "2018-11-26T16:55:56.520Z",
+    "__v": 0
+  }
+  ```
+
+### 4. Update post with Id:
+
+  ```
+  PUT /posts/:postId
+  ```
+
+* Example request url:
+  ```
+  http://apiurl/posts/####id####
+  ```
+
+* Example request body:
+  ```json
+  {
+    "user": "newfoo",
+    "title": "newbar",
+    "desc": "newfoobar"
+  }
+  ```
+
+* Example response:
+  ```javascript
+  {
+    "_id": "####id####",
+    "user": "newfoo",
+    "title": "newbar",
+    "desc": "newfoobar"
+    "createdAt": "2018-11-26T16:55:56.520Z",
+    "updatedAt": "2018-11-27T20:32:43.070Z",
+    "__v": 0
+  }
+  ```
+
+  ### 5. Delete post with Id:
+
+  ```
+  DELETE /posts/:postId
+  ```
+
+* Example request url:
+  ```
+  http://apiurl/posts/####id####
+  ```
+
+* Example response:
+  ```javascript
+  {
+    "message": "Post delete successful!"
+  }
   ```
