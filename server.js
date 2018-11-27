@@ -29,9 +29,9 @@ mongoose.connect(dbConfig.url, {
 app.use(bodyParser.json())
 
 // simple route
-app.use(express.static('public'))
-// eslint-disable-next-line no-console
-app.listen(3000, () => console.log('Server running on port 3000'))
+app.get('/', (req, res) => {
+  res.json({ message: 'Post api get successful! xDDD' })
+})
 
 // require posts routes
 require('./app/routes/post.routes')(app)
