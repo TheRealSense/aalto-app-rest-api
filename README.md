@@ -7,7 +7,44 @@ Rest API for Aalto app.
 nodejs && express && mongodb
 ```
 
-Documentation
+Prerequisites
+-------------
+
+* `git`
+* [`nodejs` + `npm`](https://nodejs.org/en/download/)
+* [mongodb](https://docs.mongodb.com/manual/installation/#tutorials):
+
+Running the server (locally)
+-------------
+
+Clone the repository:
+```bash
+git clone https://github.com/TheRealSense/aalto-app-rest-api.git
+cd aalto-app-rest-api
+
+```
+
+Install dependencies:
+```bash
+npm install
+```
+
+Start mongodb:
+```bash
+// create database directory for mondodb
+mkdir data/
+// start mongodb
+mongod --dbpath=./data/
+```
+
+Start server:
+```bash
+node server.js
+```
+
+Enjoy :neckbeard: :thumbsup:
+
+API Documentation
 -------------
 
 ### 1. Create a new post:
