@@ -11,18 +11,17 @@ Documentation
 -------------
 
 ### 1. Create a new post:
-
-  ```
+  ```javascript
   POST /posts
   ```
 
 * Example request url:
-    ```
+  ```javascript
     http://apiurl/posts
     ```
 
 * Example request body:
-  ```json
+  ```javascript
   {
     "user": "foo",
     "title": "bar",
@@ -44,15 +43,14 @@ Documentation
   ```
 
 ### 2. Get all posts
-
-```
+```javascript
 GET /posts
 ```
 
 * Example request url:
-    ```
-    http://apiurl/posts
-    ```
+  ```javascript
+  http://apiurl/posts
+  ```
 
 * Example response:
   ```javascript
@@ -79,13 +77,12 @@ GET /posts
   ```
 
 ### 3. Get one post with Id:
-
-  ```
+  ```javascript
   GET /posts/:postId
   ```
 
 * Example request url:
-  ```
+  ```javascript
   http://apiurl/posts/####id####
   ```
 
@@ -103,18 +100,17 @@ GET /posts
   ```
 
 ### 4. Update post with Id:
-
-  ```
+  ```javascript
   PUT /posts/:postId
   ```
 
 * Example request url:
-  ```
+  ```javascript
   http://apiurl/posts/####id####
   ```
 
 * Example request body:
-  ```json
+  ```javascript
   {
     "user": "newfoo",
     "title": "newbar",
@@ -136,13 +132,12 @@ GET /posts
   ```
 
   ### 5. Delete post with Id:
-
-  ```
+  ```javascript
   DELETE /posts/:postId
   ```
 
 * Example request url:
-  ```
+  ```javascript
   http://apiurl/posts/####id####
   ```
 
