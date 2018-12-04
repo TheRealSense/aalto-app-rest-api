@@ -14,16 +14,22 @@ const dbConfig = require('./config/database.config.js')
 mongoose.Promise = global.Promise
 
 // connecting to database
-mongoose.connect(dbConfig.url, {
-  useNewUrlParser: true,
-}).then(() => {
-  // eslint-disable-next-line no-console
-  console.log('Connected to database :--DDD')
-}).catch((err) => {
-  // eslint-disable-next-line no-console
-  console.log('Could not connect to database :-P', err)
-  process.exit()
-})
+mongoose
+  .connect(
+    dbConfig.url,
+    {
+      useNewUrlParser: true,
+    },
+  )
+  .then(() => {
+    // eslint-disable-next-line no-console
+    console.log('Connected to database :--DDD')
+  })
+  .catch((err) => {
+    // eslint-disable-next-line no-console
+    console.log('Could not connect to database :-P', err)
+    process.exit()
+  })
 
 // parse requests of content-type - application/json
 app.use(bodyParser.json())
