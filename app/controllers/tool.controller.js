@@ -13,6 +13,7 @@ exports.create = (req, res) => {
   // create tool
   const tool = new Tool({
     toolName: req.body.toolName,
+    toolType: req.body.toolType,
     toolDescription: req.body.toolDescription,
     toolPictureUrl: req.body.toolPictureUrl,
     toolTutorialUrl: req.body.toolTutorialUrl,
@@ -75,6 +76,7 @@ exports.update = (req, res) => {
   // get tool and update
   Tool.findByIdAndUpdate(req.params.toolId, {
     toolName: req.body.toolName,
+    toolType: req.body.toolType,
     toolDescription: req.body.toolDescription,
     toolPictureUrl: req.body.toolPictureUrl,
     toolTutorialUrl: req.body.toolTutorialUrl,

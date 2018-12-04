@@ -43,7 +43,7 @@ app.get('/', (req, res) => {
 */
 
 // require posts routes
-require('./app/routes/post.routes')(app)
+require('./app/routes/routes')(app)
 
 // listen for requests
 app.listen(3000, () => {
