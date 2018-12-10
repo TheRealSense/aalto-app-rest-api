@@ -4,7 +4,7 @@ const Tool = require('../models/tool.model.js')
 // new tool
 exports.create = (req, res) => {
   // validate request
-  if (!req.body.toolName) {
+  if (!req.body.name) {
     return res.status(400).send({
       message: 'Missing name',
     })
@@ -12,11 +12,10 @@ exports.create = (req, res) => {
 
   // create tool
   const tool = new Tool({
-    toolName: req.body.toolName,
-    toolType: req.body.toolType,
-    toolDescription: req.body.toolDescription,
-    toolPictureUrl: req.body.toolPictureUrl,
-    toolTutorialUrl: req.body.toolTutorialUrl,
+    name: req.body.name,
+    type: req.body.type,
+    img: req.body.img,
+    info: req.body.info,
   })
 
   // save to database
@@ -67,7 +66,7 @@ exports.getToolWithId = (req, res) => {
 // update tool with id
 exports.update = (req, res) => {
   // validate request
-  if (!req.body.toolName) {
+  if (!req.body.name) {
     return res.status(400).send({
       message: 'Missing name',
     })
@@ -75,11 +74,10 @@ exports.update = (req, res) => {
 
   // get tool and update
   Tool.findByIdAndUpdate(req.params.toolId, {
-    toolName: req.body.toolName,
-    toolType: req.body.toolType,
-    toolDescription: req.body.toolDescription,
-    toolPictureUrl: req.body.toolPictureUrl,
-    toolTutorialUrl: req.body.toolTutorialUrl,
+    name: req.body.name,
+    type: req.body.type,
+    img: req.body.img,
+    info: req.body.info,
   }, { new: true })
     .then((tool) => {
       if (!tool) {

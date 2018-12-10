@@ -1,13 +1,15 @@
 const mongoose = require('mongoose')
 
-const PostSchema = mongoose.Schema({
-  toolName: String,
-  toolType: String,
-  toolDescription: String,
-  toolPictureUrl: String,
-  toolTutorialUrl: String,
+const ToolSchema = mongoose.Schema({
+  name: String,
+  type: String,
+  img: String,
+  info: [{
+    desc: String,
+    url: String,
+  }],
 }, {
   timestamps: true,
 })
 
-module.exports = mongoose.model('Tool', PostSchema)
+module.exports = mongoose.model('Tool', ToolSchema)
