@@ -6,7 +6,7 @@ module.exports = {
   deploy: {
     production: {
       user: 'ubuntu',
-      host: 'ec2-3-17-23-59.us-east-2.compute.amazonaws.com',
+      host: 'ec2-18-191-213-136.us-east-2.compute.amazonaws.com',
       key: '~/.ssh/post-server-key.pem',
       ref: 'origin/master',
       repo: 'git@github.com:TheRealSense/aalto-app-rest-api.git',
